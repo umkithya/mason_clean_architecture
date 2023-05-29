@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive/build_{{name.snakeCase()}}_desktop.dart';
-import 'package:responsive/build_{{name.snakeCase()}}_mobile.dart';
-import 'package:responsive/build_{{name.snakeCase()}}_tablet.dart';
+import 'responsive/build_{{name.snakeCase()}}_desktop.dart';
+import 'responsive/build_{{name.snakeCase()}}_mobile.dart';
+import 'responsive/build_{{name.snakeCase()}}_tablet.dart';
 import 'package:get/get.dart';
 
 class {{name.pascalCase()}}Widget extends StatelessWidget {
@@ -10,9 +10,9 @@ class {{name.pascalCase()}}Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return context.responsiveValue(
-        desktop: Build{{name.pascalCase()}}Desktop,
-        tablet:Build{{name.pascalCase()}}Tablet,
-        mobile: Build{{name.pascalCase()}}Mobile,
+        desktop: Build{{name.pascalCase()}}Desktop(),
+        tablet:Build{{name.pascalCase()}}Tablet(),
+        mobile: Build{{name.pascalCase()}}Mobile(),
       );
   }
 }
