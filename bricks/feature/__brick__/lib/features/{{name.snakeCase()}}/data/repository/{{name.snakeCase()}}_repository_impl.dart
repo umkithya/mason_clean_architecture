@@ -1,4 +1,6 @@
 import '../../../../core/resource/data_state.dart';
+import '../../domain/repository/{{name.lowerCase()}}_repository.dart';
+import '../data_sources/remote/{{name.lowerCase()}}_remote_data_source.dart';
 
 class {{name.pascalCase()}}RepositoryImpl implements I{{name.pascalCase()}}Repository {
   final I{{name.pascalCase()}}RemoteDataSource _{{name.camelCase()}}RemoteDataSource;
