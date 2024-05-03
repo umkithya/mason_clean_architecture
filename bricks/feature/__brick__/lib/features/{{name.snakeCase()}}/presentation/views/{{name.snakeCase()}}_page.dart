@@ -6,7 +6,7 @@ class {{name.pascalCase()}}Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: {{name.pascalCase()}}Widget()
+      appBar: AppBar(title: Text("${{name.pascalCase()}} Screen")),
     );
   }
 }
