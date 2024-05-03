@@ -24,16 +24,13 @@ class {{name.pascalCase()}}RemoteDataSourceImpl extends I{{name.pascalCase()}}Re
 
   
   @override
-  Future<(List<LanguageModel>, Map<String, Map<String, String>>)> syncMessage(
-      {required SyncMessageParam params}) async {
-    final Response response = await DioClient.instance.dio.post(
-      Endpoints.deviceRegistration,
-      data: {"messageKeys": params.messageKeys},
+  Future<Model> get(
+      {required Param params}) async {
+    final Response response = await DioClient.instance.dio.get(
+      Endpoints.get,,
     );
-    var languages = await compute(parseLanguages, response);
-
-    var translation = await compute(parseTranslation, response);
-    return (languages, translation);
+    
+    return compute(parseModel, response);
   }
 }
 

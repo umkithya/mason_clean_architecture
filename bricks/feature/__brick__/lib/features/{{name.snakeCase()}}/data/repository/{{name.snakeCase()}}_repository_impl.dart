@@ -1,4 +1,4 @@
-import '../model/params/sync_message_param.dart';
+import '../../../../core/resource/data_state.dart';
 
 class {{name.pascalCase()}}RepositoryImpl implements I{{name.pascalCase()}}Repository {
   final I{{name.pascalCase()}}RemoteDataSource _{{name.camelCase()}}RemoteDataSource;
