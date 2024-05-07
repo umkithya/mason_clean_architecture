@@ -16,8 +16,6 @@ class {{name.pascalCase()}}Controller extends GetxController {
     {{#debug}}
       debugPrint('Debugging Success fetch{{name.pascalCase()}} : $response');
     {{/debug}}
-     
-
       list{{name.pascalCase()}}.clear();
       response['JSON_KEY'].map((element) {
         list{{name.pascalCase()}}.add({{name.pascalCase()}}Model.fromJson(element));

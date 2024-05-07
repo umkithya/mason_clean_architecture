@@ -7,19 +7,14 @@ import '../../../../../network/end_point.dart';
 
 class {{name.pascalCase()}}RemoteDataSourceImpl extends I{{name.pascalCase()}}RemoteDataSource {
   @override
-  Model parseModel(Response response) {
-    return Model.fromJson(response.data);
+  {{name.pascalCase()}}EntityDomain parseModel(Response response) {
+    return {{name.pascalCase()}}EntityDomain.fromJson(response.data);
   }
 
-  @override
-  List<Model> parseListModels(Response response) {
-    final model = Model.fromJson(response.data);
-    return model.data!;
-  }
-
+ 
   
   @override
-  Future<Model> get(
+  Future<{{name.pascalCase()}}EntityDomain> get(
       {required Param params}) async {
     final Response response = await DioClient.instance.dio.get(
       Endpoints.get,,
@@ -30,8 +25,7 @@ class {{name.pascalCase()}}RemoteDataSourceImpl extends I{{name.pascalCase()}}Re
 }
 
 abstract class I{{name.pascalCase()}}RemoteDataSource {
-  Model parseModel(Response response);
-  List<Model> parseListModels(Response response);
-  Future<Model> get{{name.pascalCase()}}(
-      {required Param params});
+  {{name.pascalCase()}}EntityDomain parseModel(Response response);
+  Future<{{name.pascalCase()}}EntityDomain> get{{name.pascalCase()}}(
+      {{{name.pascalCase()}}Param? params});
 }

@@ -7,13 +7,13 @@ class {{name.pascalCase()}}RepositoryImpl implements I{{name.pascalCase()}}Repos
   {{name.pascalCase()}}RepositoryImpl(this._{{name.camelCase()}}RemoteDataSource);
 
   @override
-  Future<DataState<Entity>> get(
-      {required Param params}) async {
+  Future<DataState<<{{name.pascalCase()}}Entity>> get(
+      {required {{name.pascalCase()}}Param params}) async {
     try {
       var result =
           await _{{name.camelCase()}}RemoteDataSource.get(params: params);
      
-      return DataSuccess(result);
+      return DataSuccess(resultw);
     } catch (error) {
       return DataFailed(error);
     }
