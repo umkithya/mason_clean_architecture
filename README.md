@@ -16,6 +16,12 @@
 ```terminal
     mason make feature
 ```
+Note*: How to reinstall :
+
+```terminal
+   mason remove -g feature
+   mason add -g feature --git-url https://github.com/umkithya/mason_with_responsive --git-path bricks/feature   
+```
 
 Enter your feature name
 
