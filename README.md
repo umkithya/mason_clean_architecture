@@ -1,4 +1,4 @@
-## Mason Template with responsive
+## Mason Template with Clean Architecture
 
 `Noted:` Make sure you have Dart & Mason installed in your machine
 
