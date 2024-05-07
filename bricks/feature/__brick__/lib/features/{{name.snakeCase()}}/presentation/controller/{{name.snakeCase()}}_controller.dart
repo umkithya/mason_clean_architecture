@@ -4,12 +4,12 @@ class {{name.pascalCase()}}Controller extends GetxController  with StateMixin<{{
 
   final Get{{name.pascalCase()}}UseCase _{{name.camelCase()}}UseCase;
 
-   {{name.pascalCase()}}Controller(this.__{{name.camelCase()}}UseCase);
-    Future<void> get{{name.pascalCase()}() async {
+   {{name.pascalCase()}}Controller(this._{{name.camelCase()}}UseCase);
+    Future<void> get{{name.pascalCase()}}() async {
     change(null, status: RxStatus.loading());
 
     final result =
-        await _{{name.camelCase()}}UseCase.call(params: {{name.pascalCase()}}Param());
+        await _{{name.camelCase()}}UseCase.call();
     if (result.error != null) {
       change(null, status: RxStatus.error(result.toString()));
     } else if (result.data != null) {
