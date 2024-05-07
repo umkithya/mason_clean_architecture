@@ -1,7 +1,7 @@
 
 import '../../../../core/resource/base_use_case.dart';
 import '../../../../core/resource/data_state.dart';
-import '../repository/{{name.lowerCase()}}_repository.dart';
+import '../repository/{{name.snakeCase()}}_repository.dart';
 
 class Get{{name.pascalCase()}}UseCase
     implements

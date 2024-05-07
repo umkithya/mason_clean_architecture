@@ -3,12 +3,12 @@ import 'package:flutter/foundation.dart';
 
 import '../../../../../constraint/locale_string.dart';
 import '../../../../../network/dio_client.dart';
-import '../../../../../network/end_point.dart';
-
+import '../../../domain/entity/{{name.snakeCase()}}_entity.dart';
+import '../../model/params/{{name.snakeCase()}}_param.dart';
 class {{name.pascalCase()}}RemoteDataSourceImpl extends I{{name.pascalCase()}}RemoteDataSource {
-  @override
-  {{name.pascalCase()}}Entity parseModel(Response response) {
-    return {{name.pascalCase()}}EntityDomain.fromJson(response.data);
+ @override
+  {{name.pascalCase()}}Entity parse{{name.pascalCase()}}Entity(Response response) {
+    return {{name.pascalCase()}}Entity.fromJson(response.data);
   }
 
  
