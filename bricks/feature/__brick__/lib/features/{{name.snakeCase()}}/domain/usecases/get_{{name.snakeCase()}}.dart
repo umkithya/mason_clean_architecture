@@ -2,6 +2,9 @@
 import '../../../../core/resource/base_use_case.dart';
 import '../../../../core/resource/data_state.dart';
 import '../repository/{{name.snakeCase()}}_repository.dart';
+import '../../data/model/params/{{name.snakeCase()}}_param.dart';
+import '../entity/{{name.snakeCase()}}_entity.dart';
+
 
 class Get{{name.pascalCase()}}UseCase
     implements

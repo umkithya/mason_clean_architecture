@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-
+import '../../domain/entity/{{name.snakeCase()}}_entity.dart';
+import '../../domain/usecases/get_{{name.snakeCase()}}.dart';
 class {{name.pascalCase()}}Controller extends GetxController  with StateMixin<{{name.pascalCase()}}Entity>{
 
   final Get{{name.pascalCase()}}UseCase _{{name.camelCase()}}UseCase;

@@ -9,7 +9,7 @@ class {{name.pascalCase()}}Entity with _${{name.pascalCase()}}Entity{
    const factory {{name.pascalCase()}}Entity ({
         required String title,
         required String description,
-      }) = _NoteEntity;
+      }) = _{{name.pascalCase()}}Entity;
   factory {{name.pascalCase()}}Entity.fromJson(Map<String, dynamic> json) =>
       _${{name.pascalCase()}}EntityFromJson(json);
   

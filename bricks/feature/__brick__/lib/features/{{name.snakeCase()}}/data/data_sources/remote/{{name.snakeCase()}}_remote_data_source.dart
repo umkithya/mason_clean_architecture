@@ -1,7 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-
-import '../../../../../constraint/locale_string.dart';
 import '../../../../../network/dio_client.dart';
 import '../../../domain/entity/{{name.snakeCase()}}_entity.dart';
 import '../../model/params/{{name.snakeCase()}}_param.dart';
@@ -14,7 +12,7 @@ class {{name.pascalCase()}}RemoteDataSourceImpl extends I{{name.pascalCase()}}Re
  
   
   @override
-  Future<{{name.pascalCase()}}Entity> get{{name.pascalCase()}}(
+  Future<{{name.pascalCase()}}Entity> get(
       {{{name.pascalCase()}}Param? params}) async {
     final Response response = await DioClient.instance.dio.get(
       "/abc",
@@ -26,6 +24,6 @@ class {{name.pascalCase()}}RemoteDataSourceImpl extends I{{name.pascalCase()}}Re
 
 abstract class I{{name.pascalCase()}}RemoteDataSource {
  {{name.pascalCase()}}Entity parse{{name.pascalCase()}}Entity(Response response);
-  Future<{{name.pascalCase()}}Entity> get{{name.pascalCase()}}(
+  Future<{{name.pascalCase()}}Entity> get(
       {{{name.pascalCase()}}Param? params});
 }
